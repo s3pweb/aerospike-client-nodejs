@@ -133,4 +133,8 @@ NAN_MODULE_INIT(Aerospike)
 	export("auth", auth_mode_enum_values());
 }
 
-NODE_MODULE(aerospike, Aerospike);
+//NODE_MODULE(aerospike, Aerospike);
+
+NODE_MODULE_INIT() {
+    Aerospike(exports);
+}
